@@ -1,10 +1,13 @@
 var counter3 = 0;
 var counter4 = 0;
 var countDatas = [
-  { firstLine: "Više od ", numData: 300, lastLine: "završenih projekata" },
-  { firstLine: "Preko", numData: 150, lastLine: "zadovoljnih klijenata" },
-  { firstLine: "Urađeno više od", numData: 100, lastLine: "kampanja" },
-  { firstLine: "Preko", numData: 15, lastLine: "godina postojanja" }
+  { firstLine: "Više", numData: 10, lastLine: "godina od osnivanja" },
+  { firstLine: "Više", numData: 10, lastLine: "strucnjaka različitih zvanja" },
+  { firstLine: "Preko", numData: 20, lastLine: "edukacija" },
+  { firstLine: "Preko", numData: 30, lastLine: "stalnih klijenata" },
+  { firstLine: " ", numData: 0, lastLine: "neuspelih kriznih komunikacija" },
+  { firstLine: "Preko", numData: 50, lastLine: "samostalnih projekata" },
+  { firstLine: "Preko", numData: 200, lastLine: "konferencija za medije" }
 ];
 
 var myCountUp = setInterval(setCountUp, 10);
@@ -317,3 +320,4 @@ function showMenu() {
 function hideTabs() {
   showMenu();
 }
+
