@@ -2,10 +2,15 @@
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
-body{
+html {
+  scroll-behavior: smooth;
+}
+body {
   width: 100vw;
   overflow-x: hidden;
 }
@@ -13,10 +18,11 @@ body{
   font-family: myFont;
   src: url(./materijal/Roboto-Black.ttf);
 }
-#burgerMenu{
+/******************************************************************************/
+#burgerMenu {
   display: none;
   background-image: url(./materijal/burgerMenu.png);
-  position: fixed; 
+  position: fixed;
   background-position: center;
   background-size: 15vw 15vw;
   width: 15vw;
@@ -25,6 +31,7 @@ body{
   top: 0;
 }
 header {
+  display: block;
   width: 100vw;
   height: 8vh;
   z-index: 8;
@@ -33,17 +40,17 @@ header {
   position: fixed;
   left: 0;
   top: 0;
- padding-left: 8vw;
- padding-right: 8vw;
+  padding-left: 8vw;
+  padding-right: 8vw;
 }
-#tabs{
+#tabs {
   width: 86vw;
   height: 8vh;
   display: grid;
   grid-template-columns: 12vw 6vw 22vw 8vw 6vw 12vw 8vw 8vw 4vw;
   margin: 0;
 }
-#firstLogo{
+#firstLogo {
   background-image: url(./materijal/headline1.png);
   background-size: 12vw;
   background-repeat: no-repeat;
@@ -52,7 +59,7 @@ header {
   cursor: pointer;
   background-color: white;
 }
-#secondLogo{
+#secondLogo {
   background-image: url(./materijal/headlineDkitlogo1.png);
   background-size: 3vw;
   background-repeat: no-repeat;
@@ -60,67 +67,77 @@ header {
   justify-content: center;
   background-color: white;
 }
-#thirdLogo{
+#thirdLogo {
   background-image: url(./materijal/dkit2.png);
   background-size: 5.6vw;
   background-repeat: no-repeat;
   background-position: left;
   background-color: white;
 }
-#thirdLogo:hover{
-background-image: url(./materijal/Dkit.png);
-cursor: pointer;
+#thirdLogo:hover {
+  background-image: url(./materijal/Dkit.png);
+  cursor: pointer;
 }
-#linkNaslovna,#linkONama,#linkUsluge,#linkKlijenti,#linkKontakt,#linkEngleski{
-text-align: center;
-padding-top: 2vh;
-font-size: 0.9em;
-background-color: #fff;
-z-index: 9;
-font-weight: 800;
+#linkNaslovna,
+#linkONama,
+#linkUsluge,
+#linkKlijenti,
+#linkKontakt,
+#linkEngleski {
+  text-align: center;
+  padding-top: 2vh;
+  font-size: 0.9em;
+  background-color: #fff;
+  z-index: 9;
+  font-weight: 800;
 }
-#linkNaslovna:hover,#linkONama:hover,#linkUsluge:hover,#linkKlijenti:hover,#linkKontakt:hover,#linkEngleski:hover{
-background-color:#AA2924;
-color: white;
-  }
-a:link,a:visited  {
+#linkNaslovna:hover,
+#linkONama:hover,
+#linkUsluge:hover,
+#linkKlijenti:hover,
+#linkKontakt:hover,
+#linkEngleski:hover {
+  background-color: #aa2924;
+  color: white;
+}
+a:link,
+a:visited {
   text-decoration: none;
   color: black;
 }
-a:hover{
+a:hover {
   color: white;
 }
-
+/****************************************************************************/
 main {
   display: block;
   width: 100%;
 }
+/****************************************************************************/
 #wraper {
   display: flex;
   flex-wrap: wrap;
   position: relative;
   width: 100vw;
-  background-image: url(./1633.png);
+  background-image: url(./1633.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
   background-position: center;
   padding-top: 8vh;
   margin: 0;
-  
 }
 #naslovna {
   display: block;
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 92vh;
   background-color: rgba(250, 235, 232, 0.7);
   background-repeat: no-repeat;
-  background-size: contain; 
+  background-size: contain;
   margin: 0;
-  
 }
-#bigWrap{
+#bigWrap {
   display: block;
   position: relative;
   width: 100vw;
@@ -130,27 +147,35 @@ main {
   animation: animate 55s linear infinite;
 }
 @keyframes animate {
-  from { background-position: 0 0; }
-    to { background-position: 0 -100vh; }
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -100vh;
+  }
 }
 #smallWrap {
   display: block;
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 92vh;
   background-image: url(headerbackgroundwords2.png);
   background-repeat: repeat-y;
   background-size: 100vw auto;
   animation: animate2 45s linear infinite;
 }
 @keyframes animate2 {
-  from { background-position: 0 0; }
-    to { background-position: 0 -150vh; }
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -150vh;
+  }
 }
 #movingPart {
   position: absolute;
   width: 100vw;
-  left:0;
+  left: 0;
   height: 20vh;
   bottom: 0;
   text-align: center;
@@ -160,10 +185,9 @@ main {
   background-position: center;
   background-repeat: no-repeat;
 }
-#movingPart p{
-  width: 50vw;
+#movingPart p {
   color: white;
-  padding: 4vh 15vw;
+  padding: 1vh 15vw;
   font-size: 1.5em;
 }
 #movingPart h1,
@@ -174,101 +198,109 @@ main {
   font-family: myFont;
   font-size: 3em;
   height: 12vh;
-  border-bottom: solid #AA2924 4px;
+  border-bottom: solid #aa2924 4px;
   margin-bottom: 3vh;
   font-weight: 900 !important;
 }
+/****************************************************************************/
 #oNama {
   display: grid;
   position: relative;
   width: 100vw;
   min-height: 100vh;
   grid-template-columns: 50vw 50vw;
-  color: #AA2924;
+  color: #aa2924;
 }
-#aboutText{
+#aboutText {
   display: block;
   justify-content: space-around;
   padding-left: 8vw;
-  
 }
-#aboutWrap{
+#aboutWrap {
   width: 37vw;
   height: 70vh;
   display: grid;
   justify-content: space-between;
   color: black;
 }
-#aboutWrap h1{
- margin-top: 10vh;
-margin-bottom: 5vh;
-border-bottom: solid 3px #AA2924;
-border-collapse: separate;
-border-spacing: 50px !important;
+#aboutWrap h1 {
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  border-bottom: solid 3px #aa2924;
+  border-collapse: separate;
+  border-spacing: 50px !important;
 }
-#aboutWrap h1::after{
+#aboutWrap h1::after {
   content: "";
   bottom: -30px;
 }
-#aboutWrap p{
+#aboutWrap p {
   margin-bottom: 5vh;
 }
-#numberCounter{
+#numberCounter {
   display: grid;
   height: 90vh;
   align-items: center;
   width: 50vw;
   font-size: 1.5em;
   text-align: center;
-  background-image: url(./materijal/aboutUsBackground.jpg);
+  background-image: url(./materijal/counterbackground.jpg);
   background-size: cover;
   background-position: center;
 }
-#countsWrap{
+#countsWrap {
   width: 50vw;
   height: 90vh;
   background-color: rgba(43, 43, 43, 0.7);
 }
-#numbsWrap{
+#numbsWrap {
   color: white;
   width: 70%;
   height: 40vh;
   text-align: right;
   margin-top: 30vh;
 }
-#numCount{
+#numCount {
   font-size: 3em;
 }
 #countFirstLine {
   font-size: 0.9em;
 }
-#countLastLine{
-font-size: 1.5em;
+#countLastLine {
+  font-size: 1.5em;
 }
 @keyframes fadeIn {
-  from {opacity: 0}
-  to {opacity: 1}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes fadeOut {
-  from {opacity: 1}
-  to {opacity: 0}
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
+/****************************************************************************/
 #usluge {
   display: grid;
   grid-template-areas:
     "header header header"
-    "left main right";
+    "lefth main righth";
   margin-left: 8vw;
-  margin-right: 8vw;
 }
 #uslugeHed {
-  margin: 8vh 0 0;
+  margin: 0;
   grid-area: header;
   height: 10vh;
-  color: #AA2924;
+  color: #aa2924;
 }
-#leftArrow { 
-  grid-area: left;
+#leftArrow {
+  grid-area: lefth;
   width: 5vw;
   height: 40vh;
   background-image: url(./materijal/strelicaLevo.png);
@@ -278,6 +310,7 @@ font-size: 1.5em;
   background-position: 0 12vh;
 }
 #rightArrow {
+  grid-area: righth;
   width: 5vw;
   height: 40vh;
   background-image: url(./materijal/strelicaDesno.png);
@@ -289,58 +322,123 @@ font-size: 1.5em;
 
 #sliderDiv {
   grid-area: main;
- 
   width: 70vw;
   height: 40vh;
 }
-#slideWrap{
-  display: grid; 
+#slideWrap {
+  display: grid;
   grid-template-areas:
-  "headPic headPic headPic headPic lastHeadPic"
-  "divPic divPic divPic divPic lastDivPic";
+    "headPic headPic headPic headPic lastHeadPic"
+    "divPic divPic divPic divPic lastDivPic";
   grid-column-gap: 1.4vw;
 }
-.picTitle{
+.picTitle {
   font-size: 1em;
   margin-bottom: 0;
-  height: 3vh;
+  height: 6vh;
 }
-#lastPicTitle{
-  height: 3vh;
+.lastPicTitle {
+  height: 5vh;
   width: 4vw;
-  content: "5"
+  content: "5";
 }
 .oneSliderDiv {
   height: 15vw;
   width: 15vw;
   margin-top: 0vh;
 }
-
-#firstPicDiv,#secondPicDiv,#thirdPicDiv,#fourthPicDiv,#lastPicDiv{
+.firstPicDiv,
+.secondPicDiv,
+.thirdPicDiv,
+.fourthPicDiv,
+.lastPicDiv {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: contain;
-}
-#firstPicDiv {
-  background-image: url(./materijal/slikeProjekata1.png);
-}
-#secondPicDiv {
-  background-image: url(./materijal/slikeProjekata2.png);
-}
-#thirdPicDiv {
-  background-image: url(./materijal/slikeProjekata3.png);
-}
-#fourthPicDiv {
-  background-image: url(./materijal/slikeProjekata4.png);
-}
-#lastPicDiv {
   background-size: cover;
-  background-image: linear-gradient(to right, transparent, white),
-    url(./materijal/slikeProjekata5.png);
-    width: 4vw;
 }
+.lastPicDiv {
+  background-size: cover;
+  width: 4vw;
+}
+/****************************************************************************/
+#bigPic {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 0;
+  padding-left: 5vw;
+}
+.galeryText {
+  display: block;
+  width: 70%;
+  margin-left: 10vw;
+  height: 15vh;
+  color: white;
+  text-align: center;
+  padding: 5vh 0;
+}
+.bigPicWrap {
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 70vw;
+  height: 85vh;
+  left: 15vw;
+  z-index: 9;
+  background-position: center;
+  padding: 1vh auto 4vh;
+}
+.slideArrowLeft {
+  font-size: 100px;
+  cursor: pointer;
+  position: absolute;
+  color: #fff;
+  user-select: none;
+  -moz-user-select: none;
+  top: 45vh;
+  left: 8vw;
+  z-index: 10;
+  background-size: 5vw;
+  background-repeat: no-repeat;
+}
+.slideArrowRight {
+  font-size: 100px;
+  cursor: pointer;
+  position: absolute;
+  color: #fff;
+  user-select: none;
+  -moz-user-select: none;
+  top: 45vh;
+  right: 8vw;
+  z-index: 10;
+  background-size: 5vw;
+  background-repeat: no-repeat;
+}
+.close {
+  position: absolute;
+  right: -5vw;
+  top: -5vh;
+  color: white;
+  font-size: 4em;
+  font-weight: bold;
+  z-index: 9;
+}
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+/****************************************************************************/
 #rekliSu {
+  margin-top: 5vh;
   position: relative;
   width: 100vw;
   height: 50vh;
@@ -353,10 +451,10 @@ font-size: 1.5em;
   grid-template-rows: 15vh 35vh;
   height: 100%;
   width: 100%;
-  background-color: rgba(198, 8, 76, 0.7);
+  background-color: rgba(170, 41, 36, 0.7);
   color: white;
 }
-#quotesHeader{
+#quotesHeader {
   padding: 5vh 8vw 0;
 }
 #randomQuote {
@@ -365,7 +463,7 @@ font-size: 1.5em;
   grid-template-rows: 23vh 12vh;
   grid-template-columns: auto;
   z-index: 5;
-  margin:0 auto;
+  margin: 0 auto;
   justify-content: center;
 }
 #quoteText {
@@ -379,9 +477,10 @@ font-size: 1.5em;
   justify-content: center;
   align-items: center;
 }
-#quoteAutor{
-  margin:0 auto;
+#quoteAutor {
+  margin: 0 auto;
 }
+/****************************************************************************/
 #klijenti {
   display: block;
   width: 100vw;
@@ -389,14 +488,14 @@ font-size: 1.5em;
   background-color: rgba(0, 0, 0, 0.05);
   padding-top: 5vh;
   padding-bottom: 10vh;
-  color: #AA2924;
+  color: #aa2924;
 }
-#klijentiNaslov{
+#klijentiNaslov {
   text-align: left;
   margin-left: 8vw;
   margin-bottom: 5vh;
 }
-#clientsWrap{
+#clientsWrap {
   padding-left: 8vw;
   padding-right: 8vw;
 }
@@ -484,67 +583,7 @@ font-size: 1.5em;
 .oneClient:hover {
   filter: grayscale(0%);
 }
-
-#bigPic {
-  display: none;
-  position: fixed; 
-  z-index: 10;
-  padding-top: 10px; 
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.4);
-  margin: 0;
-  padding-left:5vw;
-}
-#bigPicWrap {
-  display: block;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 70vw;
-  height: 100vh;
-  z-index: 9;
-  margin:0 20vw ;
-}
-#slideArrowLeft{
-  position: absolute;
-  top: 45vh;
-  left: 8vw;
-  z-index: 9;
-  background-image: url(./materijal/strelicaLevo.png);
-  width: 10vw;
-  height: 40vh;
-  background-size: 5vw;
-  background-repeat: no-repeat;
-}
-#slideArrowRight{
-  position: absolute;
-  top: 45vh;
-  right: 8vw;
-  z-index: 9;
-  background-image: url(./materijal/strelicaDesno.png);
-  width: 10vw;
-  height: 40vh;
-  background-size: 5vw;
-  background-repeat: no-repeat;
-}
-#close {
-  color: #AA2924;
-  float: right;
-  margin-right: 20vw;
-  font-size: 4em;
-  font-weight: bold;
-  z-index: 9;
-}
-
-#close:hover,
-#close:focus {
-  text-decoration: none;
-  cursor: pointer;
-}
+/****************************************************************************/
 #kontakt {
   display: block;
   position: relative;
@@ -553,77 +592,104 @@ font-size: 1.5em;
   background-color: #2b2b2b;
   padding-top: 5vh;
 }
-#contactWrap{
+#contactWrap {
   margin-left: 8vw;
   width: 84vw;
   height: 84vh;
   display: grid;
   grid-template-columns: 25vw 59vw;
 }
-#contactDatas{
+#contactDatas {
   height: 84vh;
   display: block;
   color: white;
   font-size: 0.8em;
-} 
-#contactDatas>div, #contactText, #headlineText{
+}
+#contactDatas > div,
+#contactText,
+#headlineText {
   margin-top: 5vh;
 }
-#headlineText{
+#headlineText {
   font-size: 1.5em;
 }
-#mailText, #adressText, #phoneText{
+#mailText,
+#adressText,
+#phoneText {
   font-weight: 400;
 }
-#mailMail, #adressAdress,#adressCode, #phoneNumb{
+#mailMail,
+#adressAdress,
+#adressCode,
+#phoneNumb {
   font-weight: 900;
 }
-#mapWrap{
+#mapWrap {
   margin-top: 13vh;
   height: 45vw;
   margin-left: 15vw;
-  
 }
-#mapWrap iframe{
+#mapWrap iframe {
   width: 45vw;
   height: 30vw;
   outline: 3px gray solid;
 }
-
+/****************************************************************************/
 @media only screen and (max-width: 950px) {
-  #tabs{
+  #tabs {
     display: grid;
     grid-template-columns: 12vw 6vw 15vw 8vw 8vw 15vw 10vw 8vw 4vw;
   }
-  #linkNaslovna,#linkONama,#linkUsluge,#linkKlijenti,#linkKontakt,#linkEngleski{
+  #linkNaslovna,
+  #linkONama,
+  #linkUsluge,
+  #linkKlijenti,
+  #linkKontakt,
+  #linkEngleski {
     font-size: 0.8em;
     font-weight: 800;
-    }
- 
-  #aboutWrap{
+  }
+  .picTitle {
+    font-size: 0.9em;
+    height: 7vh;
+  }
+  #aboutWrap {
     font-size: 0.9em;
   }
-  #aboutWrap h1{
+  #aboutWrap h1 {
     margin-top: 5vh;
-   }
- 
+  }
 }
-@media only screen and (max-width: 680px){
-  #tabs{
-    grid-template-columns: 10vw 6vw 15vw 8vw 8vw 17vw 12vw 8vw 4vw;
+/****************************************************************************/
+@media only screen and (max-width: 680px) {
+  #tabs {
+    grid-template-columns: 12vw 6vw 13vw 8vw 8vw 17vw 12vw 8vw 4vw;
     font-size: 0.8em;
   }
-  #wraper{
+  #wraper {
     background-size: cover;
+  }
+  .picTitle {
+    font-size: 0.8em;
+    height: 7vh;
+  }
+  .bigPicWrap {
+    width: 80vw;
+    left: 10vw;
+  }
+  .close {
+    position: absolute;
+    right: -5vw;
+    top: 0;
   }
   #oNama {
     margin-bottom: 5vh;
   }
-  #aboutWrap{
+  #aboutWrap {
     font-size: 0.8em;
     margin-bottom: 4vh;
   }
-  #aboutWrap h1{
+  #aboutWrap h1 {
     margin-top: 4vh;
   }
   #movingPart {
@@ -633,33 +699,41 @@ font-size: 1.5em;
     padding: 0 3vw;
   }
 }
-@media only screen and (max-width: 460px){
-  #burgerMenu{
+@media only screen and (max-width: 500px) {
+  .picTitle {
+    font-size: 0.7em;
+  }
+  .bigPicWrap {
+    width: 90vw;
+    left: 5vw;
+  }
+}
+/****************************************************************************/
+@media only screen and (max-width: 460px) {
+  #burgerMenu {
     display: block;
     z-index: 15;
   }
-  header{
-    display: none;  
+  header {
+    display: none;
     min-height: 56vh;
   }
-  #tabs{
+  #tabs {
     display: none;
     width: 100vw;
-    grid-template-areas: 
-    "firstLogo firstLogo firstLogo secondLogo thirdLogo thirdLogo thirdLogo"
-    "naslovna naslovna naslovna naslovna naslovna naslovna naslovna"
-    "oNama oNama oNama oNama oNama oNama oNama"
-    "usluge usluge usluge usluge usluge usluge usluge"
-    "klijenti klijenti klijenti klijenti klijenti klijenti klijenti"
-    "kontakt kontakt kontakt kontakt kontakt kontakt kontakt"
-    "engleski engleski engleski engleski engleski engleski engleski";
-    /*grid-template-columns: none;
-    grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh ;*/
+    grid-template-areas:
+      "firstLogo firstLogo firstLogo secondLogo thirdLogo thirdLogo thirdLogo"
+      "naslovna naslovna naslovna naslovna naslovna naslovna naslovna"
+      "oNama oNama oNama oNama oNama oNama oNama"
+      "usluge usluge usluge usluge usluge usluge usluge"
+      "klijenti klijenti klijenti klijenti klijenti klijenti klijenti"
+      "kontakt kontakt kontakt kontakt kontakt kontakt kontakt"
+      "engleski engleski engleski engleski engleski engleski engleski";
     font-size: 1em;
     margin: 0;
     left: 0;
   }
-  #firstLogo{
+  #firstLogo {
     grid-area: firstLogo;
     width: 45vw;
     position: relative;
@@ -669,7 +743,7 @@ font-size: 1.5em;
     right: 10vw;
     justify-content: center;
   }
-  #secondLogo{
+  #secondLogo {
     grid-area: secondLogo;
     width: 10vw;
     position: relative;
@@ -680,7 +754,7 @@ font-size: 1.5em;
     justify-content: center;
     float: left;
   }
-  #thirdLogo{
+  #thirdLogo {
     grid-area: thirdLogo;
     width: 45vw;
     position: relative;
@@ -691,26 +765,30 @@ font-size: 1.5em;
     float: left;
     background-position: 5vw center;
   }
-  #linkNaslovna{
+  #linkNaslovna {
     grid-area: naslovna;
   }
-  #linkONama{
+  #linkONama {
     grid-area: oNama;
   }
-  #linkUsluge{
-    grid-area:usluge
+  #linkUsluge {
+    grid-area: usluge;
   }
-  #linkKlijenti{
-    grid-area:klijenti
+  #linkKlijenti {
+    grid-area: klijenti;
   }
-  #linkKontakt{
-    grid-area: kontakt
+  #linkKontakt {
+    grid-area: kontakt;
   }
-  #linkEngleski{
+  #linkEngleski {
     grid-area: engleski;
   }
-  #linkNaslovna,#linkONama,#linkUsluge,
-  #linkKlijenti,#linkKontakt,#linkEngleski{
+  #linkNaslovna,
+  #linkONama,
+  #linkUsluge,
+  #linkKlijenti,
+  #linkKontakt,
+  #linkEngleski {
     clear: both;
     position: relative;
     width: 100vw;
@@ -719,56 +797,69 @@ font-size: 1.5em;
     right: 10vw;
     justify-content: center;
   }
-  #wraper{ 
+  #wraper {
     padding-top: 0;
- }
+  }
   #movingPart {
     position: absolute;
     left: 0;
     font-size: 0.8em;
-    padding:0 5vw;
+    padding: 0 5vw;
   }
-  #oNama{
+  #oNama {
     display: block;
     min-height: 160vh;
   }
-  #aboutText{
+  #aboutText {
     display: block;
     height: 100%;
     justify-content: center;
     margin-bottom: 5vh;
   }
-  #aboutWrap{
-    width: 90%; 
+  #aboutWrap {
+    width: 90%;
     height: 100%;
-    padding:0 3vw;
+    padding: 0 3vw;
     display: block;
     justify-content: space-between;
     color: black;
     margin-bottom: 5vh;
   }
-  #numberCounter{
+  #numberCounter {
     width: 100vw;
     font-size: 1.5em;
   }
-  #countsWrap{
+  #countsWrap {
     width: 100vw;
     height: 90vh;
   }
-  #numbsWrap{
+  #numbsWrap {
     color: white;
     width: 70%;
     height: 40vh;
     text-align: right;
     margin-top: 30vh;
   }
-  #slideWrap{
+  #slideWrap {
     grid-template-areas:
-    "headPic headPic "
-    "divPic divPic ";
+      "headPic headPic "
+      "divPic divPic ";
     grid-column-gap: 1vw;
   }
-  #thirdPicTitle,#fourthPicTitle,#lastPicTitle,#thirdPicDiv,#fourthPicDiv,#lastPicDiv{
+  .picTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    margin-bottom: 0;
+    height: 4vh;
+  }
+  .picTitle:nth-child(3),
+  .picTitle:nth-child(4),
+  .lastPicTitle,
+  .thirdPicDiv,
+  .fourthPicDiv,
+  .lastPicDiv {
     display: none;
   }
   .oneSliderDiv {
@@ -776,14 +867,14 @@ font-size: 1.5em;
     width: 30vw;
     margin: 5vh auto;
   }
-  #randomQuote{
+  #randomQuote {
   }
   #clientsContainer {
     display: grid;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
     grid-template-columns: auto auto auto auto auto auto auto;
-    grid-template-columns: auto auto auto ;
+    grid-template-columns: auto auto auto;
     justify-content: space-evenly;
   }
   .oneClient {
@@ -795,38 +886,39 @@ font-size: 1.5em;
     background-size: contain;
     filter: grayscale(0);
   }
-  #contactWrap{
+  #contactWrap {
     margin-left: 8vw;
     width: 84vw;
     min-height: 84vh;
     display: block;
   }
-  #contactDatas{
+  #contactDatas {
     height: 64vh;
     display: block;
-  } 
-  #mapWrap{
+  }
+  #mapWrap {
     margin-top: 0;
     height: 80vw;
     height: 40vw;
     margin-left: 0;
   }
-  #mapWrap iframe{
-    width:100%;
+  #mapWrap iframe {
+    width: 100%;
     height: 100%;
   }
-  
+
   #quoteText {
     background-size: 85vw 25vw;
     width: 85vw;
-    margin:0;
+    margin: 0;
     font-size: 0.8em;
   }
-  #quoteAutor{
+  #quoteAutor {
     font-size: 0.8em;
   }
 }
-@media only screen and (max-width: 320px){
+/****************************************************************************/
+@media only screen and (max-width: 320px) {
   #movingPart {
     font-size: 0.7em;
   }
@@ -834,21 +926,26 @@ font-size: 1.5em;
     background-size: 85vw 38vw;
     font-size: 0.7em;
   }
-  #quoteAutor{
+  #quoteAutor {
     font-size: 0.7em;
   }
-  #secondPicTitle, #secondPicDiv{
+  .picTitle:nth-child(2),
+  #secondPicDiv {
     display: none;
   }
-  #slideWrap{
+  #slideWrap {
     grid-template-areas:
-    "headPic "
-    "divPic";
+      "headPic "
+      "divPic";
     grid-column-gap: 1vw;
   }
   .oneSliderDiv {
     height: 50vw;
     width: 50vw;
     margin: 5vh auto;
+  }
+  .bigPicWrap {
+    width: 90vw;
+    left: 2vw;
   }
 }

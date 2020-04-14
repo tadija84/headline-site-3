@@ -1,17 +1,21 @@
 var counter3 = 0;
 var counter4 = 0;
 var countDatas = [
-  { firstLine: "Više od", numData: 10, lastLine: "godina od osnivanja" },
   {
-    firstLine: "Više od",
+    firstLine: "More than",
     numData: 10,
-    lastLine: "strucnjaka različitih zvanja",
+    lastLine: "years since our inception",
   },
-  { firstLine: "Preko", numData: 20, lastLine: "edukacija" },
-  { firstLine: "Preko", numData: 30, lastLine: "stalnih klijenata" },
-  { firstLine: " ", numData: 0, lastLine: "neuspelih kriznih komunikacija" },
-  { firstLine: "Preko", numData: 50, lastLine: "samostalnih projekata" },
-  { firstLine: "Preko", numData: 200, lastLine: "konferencija za medije" },
+  {
+    firstLine: "More than",
+    numData: 10,
+    lastLine: "experts of different vocations",
+  },
+  { firstLine: "Over", numData: 20, lastLine: "educations" },
+  { firstLine: "Over", numData: 30, lastLine: "regular customers" },
+  { firstLine: " ", numData: 0, lastLine: "failed crisis communications" },
+  { firstLine: "Over", numData: 50, lastLine: "independent projects" },
+  { firstLine: "Over", numData: 200, lastLine: "press conference" },
 ];
 
 var myCountUp = setInterval(setCountUp, 10);
@@ -112,13 +116,13 @@ var slidePictures = [
     galery: "got",
   },
   {
-    picTitle: "Adidas turneja Derrick Rose",
+    picTitle: "Adidas tour Derrick Rose",
     picSourse: "./fotografijeProjekata/3adidasDR.jpg",
     id: 3,
     galery: "adidas",
   },
   {
-    picTitle: "Microsoft Sinergija",
+    picTitle: "Microsoft Synergy",
     picSourse: "./fotografijeProjekata/4Sinergija1.jpg",
     id: 4,
     galery: "microsoft",
@@ -130,7 +134,7 @@ var slidePictures = [
     galery: "ebrd",
   },
   {
-    picTitle: "“Budi odgovorna” ",
+    picTitle: "“Be responsible” ",
     picSourse: "./fotografijeProjekata/6Budiodgovorna.png",
     id: 6,
     galery: "odgovornost",
@@ -338,7 +342,7 @@ function showNextPic(galeryName, index) {
 
 var galeryPics = {
   siemens: [
-    ["Komunikacijska podrška povodom 125 godina poslovanja Siemensa u Srbiji"],
+    ["Communication support for the 125th anniversary of Siemens in Serbia"],
     [
       "./fotografijeProjekata/1Siemens1.jpg",
       "./fotografijeProjekata/1Siemens2.jpg",
@@ -349,19 +353,19 @@ var galeryPics = {
   ],
   got: [
     [
-      "Organizacija događaja povodom najave nove sezone serijala Game of Thrones",
+      "Event organizing the announcement of the new season of the Game of Thrones series",
     ],
     ["./fotografijeProjekata/2IgraPrestola.jpg"],
   ],
   adidas: [
     [
-      "Komunikacijska podrška povodom Adidas D. Rose turneje i dolaska NBA zvezde Derrick-a Rose-a u Srbiju",
+      "Communication support on the Adidas D. Rose tour and the arrival of NBA star Derrick Rose in Serbia",
     ],
     ["./fotografijeProjekata/3adidasDR.jpg"],
   ],
   microsoft: [
     [
-      "Komunikacijska podrška najvećoj IT i biznis konferenciji Microsoft Sinergija (2017, 2018, 2019)",
+      "Communication support for Microsoft Synergy's largest IT and business conference (2017, 2018, 2019)",
     ],
     [
       "./fotografijeProjekata/4Sinergija1.jpg",
@@ -370,37 +374,35 @@ var galeryPics = {
   ],
   ebrd: [
     [
-      "Komunikacijska podrška regionalnoj konferenciji EBRD-a, Consumer Rules Summit",
+      "Communication support to the EBRD Regional Conference, Consumer Rules Summit",
     ],
     ["./fotografijeProjekata/5EBRD.jpg"],
   ],
   odgovornost: [
     [
-      "Integrisana komunikacijska kampanja “Budi odgovorna” sa ciljem podizanja svesti o prevenciji raka grlića materice",
+      "Integrated “Be responsible” communication campaign to raise awareness about prevention of cervical cancer",
     ],
     ["./fotografijeProjekata/6Budiodgovorna.png"],
   ],
   foodFactory: [
-    [
-      "Komunikacijska podrška povodom otvaranja Fabrike dečje hrane (Baby Food Factory)",
-    ],
+    ["Communication support for the opening of the Baby Food Factory"],
     ["./fotografijeProjekata/7BFF.jpg"],
   ],
   alkaloid: [
     [
-      "Komunikacijska podrška procesu uvođenja noveterapije lečenja bolesti zavisnosti za kompaniju Alkaloid Skopje",
+      "Communication support for the introduction of a new addiction treatment for Alkaloid Skopje",
     ],
     ["./fotografijeProjekata/8Alkaloid.JPG"],
   ],
   wte: [
     [
-      "Komunikacijska podrška projektu izgradnje fabrike za prečišćavanje vode za kompaniju WTE Group",
+      "Communication support for the construction of a water treatment plant for WTE Group",
     ],
     ["./fotografijeProjekata/9wte.jpg"],
   ],
   metro: [
     [
-      "Podrška u promociji METRO Own Business Day 2019 – Gastro Party događaja u METRO Cash & Carry centru u Zemunu. METRO Own Business Day je projekat osmišljen kao praktična i besplatna podrška samostalnim preduzetnicima, sa ciljem da podstakne i pomogne njihovu promociju i veću vidljivost, koja će im pomoći u razvoju poslovanja.",
+      "Support in promoting METRO Own Business Day 2019 - Gastro Party event at METRO Cash & Carry Center in Zemun. METRO Own Business Day is a project designed to provide practical and free support to freelancers, with the aim of encouraging and helping their promotion and greater visibility, which will help them grow their business.",
     ],
     [
       "./fotografijeProjekata/10metro1.jpg",
@@ -433,15 +435,14 @@ function showMenu() {
 function hideTabs() {
   showMenu();
 }
-window.addEventListener("resize",screenWidthChange);
-function screenWidthChange(event){
+window.addEventListener("resize", screenWidthChange);
+function screenWidthChange(event) {
   event.preventDefault();
-if (screen.width > 460) {
-  document.getElementById("mainHeader").style.display = "block";
-  document.getElementById("tabs").style.display = "grid";
-}else{
-  document.getElementById("mainHeader").style.display = "none";
-  document.getElementById("tabs").style.display = "none";
+  if (screen.width > 460) {
+    document.getElementById("mainHeader").style.display = "block";
+    document.getElementById("tabs").style.display = "grid";
+  } else {
+    document.getElementById("mainHeader").style.display = "none";
+    document.getElementById("tabs").style.display = "none";
+  }
 }
-}
-
